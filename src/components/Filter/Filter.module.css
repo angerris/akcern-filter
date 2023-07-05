@@ -1,0 +1,5 @@
+.filter {
+  display: flex;
+  background-color: cadetblue;
+  flex-direction: column;
+}
