@@ -5,16 +5,18 @@ import logo from "./../../../assets/images/rooms.svg";
 export default function Rooms() {
   return (
     <>
-      <div className={style.filterTitle}>
-        <img src={logo} alt="" />
-        <p>Սենյակներ</p>
-      </div>
+      <div className={style.componentSpacing}>
+        <div className={style.filterTitle}>
+          <img src={logo} alt="" />
+          <p>Սենյակներ</p>
+        </div>
 
-      <div className={style.roomsContainer}>
-        <RoomsNumber x={1} />
-        <RoomsNumber x={2} />
-        <RoomsNumber x={3} />
-        <RoomsNumber x={"4+"} />
+        <div className={style.roomsContainer}>
+          <RoomsNumber x={1} />
+          <RoomsNumber x={2} />
+          <RoomsNumber x={3} />
+          <RoomsNumber x={"4+"} />
+        </div>
       </div>
     </>
   );

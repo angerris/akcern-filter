@@ -12,33 +12,8 @@ import { CustomInputStyles } from "./CustomStyles";
 export default function Filter() {
   return (
     <div className={style.filter}>
-      {/* search form */}
-      <FormControl>
-        <TextField
-          InputProps={{
-            sx: {
-              ...CustomInputStyles.rootInputStyles,
-            },
-          }}
-          inputProps={{
-            sx: {
-              ...CustomInputStyles.inputStyles,
-            },
-          }}
-          className={`${style.field} ${style.searchField}`}
-          id="outlined-basic"
-          variant="outlined"
-          type="text"
-          placeholder="Կոդ"
-        />
-        <button className={style.searchButton}>
-          <img src={search} alt="" srcset="" />
-        </button>
-        <div className={`${style.field} ${style.labeledCheckbox}`}>
-          <p>Հավանած</p>
-          <Checkbox />
-        </div>
-      </FormControl>
+      {/* search  */}
+      <SearchForm />
       {/* Անշարժ գույք */}
       <RealEstate />
       {/* Հասցե */}
@@ -53,5 +28,46 @@ export default function Filter() {
       <Parameters />
       <Button variant="outlined">Չեղարկել</Button>
     </div>
+  );
+}
+export function SearchForm() {
+  return (
+    <>
+      <div className={`${style.searchFormContainer} ${style.componentSpacing}`}>
+        <FormControl>
+          <div className={style.searchForm}>
+            <TextField
+              InputProps={{
+                sx: {
+                  ...CustomInputStyles.rootInputStyles,
+                },
+              }}
+              inputProps={{
+                sx: {
+                  ...CustomInputStyles.inputStyles,
+                },
+              }}
+              className={`${style.field} ${style.searchField}`}
+              id="outlined-basic"
+              variant="outlined"
+              type="text"
+              placeholder="Կոդ"
+            />
+            <div>
+              <button className={style.searchButton}>
+                <img src={search} alt="" srcset="" />
+              </button>
+              <label
+                for="likedCheck"
+                className={`${style.field} ${style.labeledCheckbox}`}
+              >
+                <p>Հավանած</p>
+                <Checkbox id="likedCheck" />
+              </label>
+            </div>
+          </div>
+        </FormControl>
+      </div>
+    </>
   );
 }

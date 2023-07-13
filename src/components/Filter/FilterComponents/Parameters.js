@@ -5,13 +5,15 @@ import logo from "./../../../assets/images/parameters.svg";
 export default function Parameters() {
   return (
     <>
-      <div className={style.filterTitle}>
-        <img src={logo} alt="" />
-        <p>Անշարժ գույքի պարամետրեր</p>
+      <div className={style.componentSpacing}>
+        <div className={style.filterTitle}>
+          <img src={logo} alt="" />
+          <p>Անշարժ գույքի պարամետրեր</p>
+        </div>
+        <Type />
+        <Restoration />
+        <Floor />
       </div>
-      <Type />
-      <Restoration />
-      <Floor />
     </>
   );
 }
@@ -34,7 +36,7 @@ export function Type() {
         className={`${style.field}`}
       >
         <MenuItem value="">
-          <em>Կառույցի տեսակը</em>
+          <span className={style.defaultSelect}>Կառույցի տեսակը</span>
         </MenuItem>
         <MenuItem value={10}>Ten</MenuItem>
         <MenuItem value={20}>Twenty</MenuItem>
@@ -63,7 +65,7 @@ export function Restoration() {
         className={`${style.field}`}
       >
         <MenuItem value="">
-          <em>Վերանորոգում</em>
+          <span className={style.defaultSelect}>Վերանորոգում</span>
         </MenuItem>
         <MenuItem value={10}>Ten</MenuItem>
         <MenuItem value={20}>Twenty</MenuItem>
@@ -91,7 +93,7 @@ export function Floor() {
         className={`${style.field}`}
       >
         <MenuItem value="">
-          <em>Հարկ</em>
+          <span className={style.defaultSelect}>Հարկ</span>
         </MenuItem>
         <MenuItem value={10}>Ten</MenuItem>
         <MenuItem value={20}>Twenty</MenuItem>

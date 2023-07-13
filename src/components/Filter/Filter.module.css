@@ -13,7 +13,6 @@
   background-color: #fff;
   border-radius: 12px;
 }
-
 .searchField {
   position: relative;
   color: var(--title-black);
@@ -21,10 +20,15 @@
 .searchButton {
   position: absolute;
   z-index: 111;
-  right: 4px;
-  top: 10%;
+  right: 8px;
+  top: 8%;
   border: none;
   background: transparent;
+}
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
 }
 .labeledCheckbox {
   width: 100%;
@@ -35,14 +39,19 @@
   border: 1px solid var(--border-black);
   color: var(--title-black);
   border-radius: 12px;
-  padding: 8px;
+  padding: 8px 8px 8px 16px;
   max-height: 40px;
+  cursor: pointer;
+}
+.labeledCheckbox:hover {
+  border: 1px solid var(--primary-black);
 }
 .flexContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 0;
 }
 .flexContainerInner {
   display: flex;
@@ -52,9 +61,11 @@
 }
 .line {
   margin: 0 8px;
+  font-weight: bold;
 }
 .currency {
-  max-width: 100px;
+  font-size: 16px;
+  width: 100px;
 }
 .roomButtonSelected {
   background-color: #06f;
@@ -68,13 +79,14 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid var(--border-black);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
   font-size: 14px;
   font-weight: bold;
+  cursor: pointer;
 }
 .roomsContainer {
   display: flex;
@@ -85,4 +97,17 @@
   display: flex;
   flex-direction: row;
   column-gap: 8px;
+}
+.componentSpacing {
+  margin: 0 0 16px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.priceField {
+  max-width: 120px;
+}
+
+.defaultSelect {
+  color: var(--secondary-black);
 }

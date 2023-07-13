@@ -4,19 +4,66 @@ import { Checkbox, FormControl, MenuItem, Select } from "@mui/material";
 import logo from "./../../../assets/images/realty.svg";
 
 export default function RealEstate() {
+  return (
+    <>
+      <div className={style.componentSpacing}>
+        <div className={style.filterTitle}>
+          <img src={logo} alt="" srcset="" />
+          <p>Անշարժ գույք</p>
+        </div>
+        <Deal />
+        <RealtyType />
+        <FormControl>
+          <label
+            for="newCheck"
+            className={`${style.field} ${style.labeledCheckbox}`}
+          >
+            <p>Նորակառույց</p>
+            <Checkbox id="newCheck" />
+          </label>
+        </FormControl>
+      </div>
+    </>
+  );
+}
+export function Deal() {
   const [value, setValue] = useState("");
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
 
-  //This should execute by default or on Page Load
+  return (
+    <>
+      <FormControl>
+        <Select
+          sx={{
+            height: 40,
+            borderRadius: "12px",
+          }}
+          value={value}
+          onChange={handleChange}
+          displayEmpty
+          className={`${style.field} `}
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          <MenuItem value="">
+            <span className={style.defaultSelect}>Գործարք</span>
+          </MenuItem>
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+      </FormControl>
+    </>
+  );
+}
+export function RealtyType() {
+  const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
   };
   return (
     <>
-      <div className={style.filterTitle}>
-        <img src={logo} alt="" srcset="" />
-        <p>Անշարժ գույք</p>
-      </div>
-
       <FormControl>
         <Select
           sx={{
@@ -30,39 +77,12 @@ export default function RealEstate() {
           inputProps={{ "aria-label": "Without label" }}
         >
           <MenuItem value="">
-            <em>Գործարք</em>
+            <span className={style.defaultSelect}> Գույքի տեսակը</span>
           </MenuItem>
           <MenuItem value={10}>Ten</MenuItem>
           <MenuItem value={20}>Twenty</MenuItem>
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
-      </FormControl>
-
-      <FormControl>
-        <Select
-          sx={{
-            height: 40,
-            borderRadius: "12px",
-          }}
-          value={value}
-          onChange={handleChange}
-          displayEmpty
-          className={`${style.field}`}
-          inputProps={{ "aria-label": "Without label" }}
-        >
-          <MenuItem value="">
-            <em>Գույքի տեսակը</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-      <FormControl>
-        <div className={`${style.field} ${style.labeledCheckbox}`}>
-          <p>Նորակառույց</p>
-          <Checkbox />
-        </div>
       </FormControl>
     </>
   );
