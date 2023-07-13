@@ -1,5 +1,22 @@
 .header {
-  background-color: darkcyan;
   display: flex;
+  height: 64px;
+  flex-direction: row;
   width: 100%;
+}
+.headerList {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.headerList > * {
+  display: flex;
+  flex-direction: row;
+  margin: 0 16px;
+}
+.logo {
+  padding: 13px;
 }

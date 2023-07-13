@@ -1,7 +1,6 @@
 .cardWrapper {
-  background-color: coral;
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+
   padding: 30px;
 }

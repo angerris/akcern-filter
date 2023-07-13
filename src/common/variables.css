@@ -1,0 +1,11 @@
+:root {
+  --blue: #0066ff;
+  --orange: #ff9933;
+  --title-black: rgba(0, 0, 0, 0.85);
+  --primary-black: rgba(0, 0, 0, 0.65);
+  --secondary-black: rgba(0, 0, 0, 0.45);
+  --disabled-black: rgba(0, 0, 0, 0.25);
+  --border-black: rgba(0, 0, 0, 0.15);
+  --textfield-grey: rgba(153, 153, 153, 1);
+  --bg-grey: rgba(255, 255, 255, 0.5);
+}

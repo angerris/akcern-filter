@@ -1,43 +1,57 @@
-import Region from "./FIlterComponents/Address/Region";
-import Area from "./FIlterComponents/Area/Area";
-import FilterByLiked from "./FIlterComponents/FilterByLiked";
-import Price from "./FIlterComponents/Price/Price";
-import ApartmentType from "./FIlterComponents/Realty/ApartmentType";
-import Deal from "./FIlterComponents/Realty/Deal";
-import NewBuilt from "./FIlterComponents/Realty/NewBuilt";
-import Floor from "./FIlterComponents/RealtyParameters/Floor";
-import Restoration from "./FIlterComponents/RealtyParameters/Restoration";
-import Structure from "./FIlterComponents/RealtyParameters/Structure";
-import Rooms from "./FIlterComponents/Rooms/Rooms";
-import SearchByCode from "./FIlterComponents/SearchByCode";
 import style from "./Filter.module.css";
+import { Button, Checkbox, FormControl, TextField } from "@mui/material";
+import RealEstate from "./FilterComponents/RealEstate";
+import Address from "./FilterComponents/Address";
+import Price from "./FilterComponents/Price";
+import Area from "./FilterComponents/Area";
+import Rooms from "./FilterComponents/Rooms";
+import Parameters from "./FilterComponents/Parameters";
+import search from "./../../assets/images/search.svg";
 
-export default function Filter(props) {
+import { CustomInputStyles } from "./CustomStyles";
+export default function Filter() {
   return (
     <div className={style.filter}>
-      <form action="">
-        <SearchByCode />
-        <FilterByLiked />
-      </form>
-      <form action="">
-        <div>real estate:</div>
-        <Deal {...props} />
-        <ApartmentType />
-        <NewBuilt />
-        <div>address:</div>
-        <Region />
-        <div>price:</div>
-        <Price />
-        <div>area:</div>
-        <Area />
-        <div>rooms:</div>
-        <Rooms />
-        <div>realty parameters:</div>
-        <Structure />
-        <Restoration />
-        <Floor />
-        <input type="submit" />
-      </form>
+      {/* search form */}
+      <FormControl>
+        <TextField
+          InputProps={{
+            sx: {
+              ...CustomInputStyles.rootInputStyles,
+            },
+          }}
+          inputProps={{
+            sx: {
+              ...CustomInputStyles.inputStyles,
+            },
+          }}
+          className={`${style.field} ${style.searchField}`}
+          id="outlined-basic"
+          variant="outlined"
+          type="text"
+          placeholder="Կոդ"
+        />
+        <button className={style.searchButton}>
+          <img src={search} alt="" srcset="" />
+        </button>
+        <div className={`${style.field} ${style.labeledCheckbox}`}>
+          <p>Հավանած</p>
+          <Checkbox />
+        </div>
+      </FormControl>
+      {/* Անշարժ գույք */}
+      <RealEstate />
+      {/* Հասցե */}
+      <Address />
+      {/* Գին */}
+      <Price />
+      {/* Մակերես մ² */}
+      <Area />
+      {/* Սենյակներ  */}
+      <Rooms />
+      {/* Անշարժ գույքի պարամետրեր */}
+      <Parameters />
+      <Button variant="outlined">Չեղարկել</Button>
     </div>
   );
 }

@@ -1,8 +1,64 @@
+@import url("./assets/fonts/fonts.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  background: url("./assets/images/Buy.png") 0 0 / cover no-repeat;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Verdana";
+  font-weight: 400;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding: 0 84px;
+}
 .contentWrapper {
   display: flex;
-  height: 500px;
+  border-radius: 32px;
+  border: 2px solid white;
   flex-direction: row;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(100px);
 }
 .contentWrapper > * {
   flex-grow: 1;

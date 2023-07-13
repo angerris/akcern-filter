@@ -1,5 +1,88 @@
+@import url("./../../common/variables.css");
 .filter {
   display: flex;
-  background-color: cadetblue;
+  background-color: var(--bg-grey);
   flex-direction: column;
+  row-gap: 16px;
+  max-width: 428px;
+  max-height: 1136px;
+  border-radius: 32px 0 0 32px;
+  padding: 30px;
+}
+.field {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.searchField {
+  position: relative;
+  color: var(--title-black);
+}
+.searchButton {
+  position: absolute;
+  z-index: 111;
+  right: 4px;
+  top: 10%;
+  border: none;
+  background: transparent;
+}
+.labeledCheckbox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-black);
+  color: var(--title-black);
+  border-radius: 12px;
+  padding: 8px;
+  max-height: 40px;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexContainerInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.line {
+  margin: 0 8px;
+}
+.currency {
+  max-width: 100px;
+}
+.roomButtonSelected {
+  background-color: #06f;
+  color: #fff;
+  transition: 0.3s;
+}
+.roomButton {
+  background-color: #fff;
+}
+.roomPrimaryBtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: bold;
+}
+.roomsContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50%;
+}
+.filterTitle {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
 }
