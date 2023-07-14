@@ -49,9 +49,8 @@ export function Deal() {
           <MenuItem value="">
             <span className={style.defaultSelect}>Գործարք</span>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={1}>Վաճառք</MenuItem>
+          <MenuItem value={2}>Վարձակալություն</MenuItem>
         </Select>
       </FormControl>
     </>
@@ -79,9 +78,9 @@ export function RealtyType() {
           <MenuItem value="">
             <span className={style.defaultSelect}> Գույքի տեսակը</span>
           </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={1}>Տուն</MenuItem>
+          <MenuItem value={2}>Բնակարան</MenuItem>
+          <MenuItem value={3}>Հողատարածք</MenuItem>
         </Select>
       </FormControl>
     </>

@@ -71,9 +71,7 @@ export default function Price() {
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
             >
-              <MenuItem value="" className={style.defaultSelect}>
-                AMD
-              </MenuItem>
+              <MenuItem value="">AMD</MenuItem>
               <MenuItem value="usd">USD</MenuItem>
               <MenuItem value="eur">EUR</MenuItem>
             </Select>

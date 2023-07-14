@@ -38,9 +38,9 @@ export function Type() {
         <MenuItem value="">
           <span className={style.defaultSelect}>Կառույցի տեսակը</span>
         </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        <MenuItem value={1}>Քարե</MenuItem>
+        <MenuItem value={2}>Պանելային</MenuItem>
+        <MenuItem value={3}>Կասետային</MenuItem>
       </Select>
     </FormControl>
   );
@@ -67,9 +67,9 @@ export function Restoration() {
         <MenuItem value="">
           <span className={style.defaultSelect}>Վերանորոգում</span>
         </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        <MenuItem value={10}>Առանց վերանորոգման</MenuItem>
+        <MenuItem value={20}>Վերանորոգվում է</MenuItem>
+        <MenuItem value={30}>Վերանորոգված</MenuItem>
       </Select>
     </FormControl>
   );
@@ -95,9 +95,11 @@ export function Floor() {
         <MenuItem value="">
           <span className={style.defaultSelect}>Հարկ</span>
         </MenuItem>
-        <MenuItem value={10}>Ten</MenuItem>
-        <MenuItem value={20}>Twenty</MenuItem>
-        <MenuItem value={30}>Thirty</MenuItem>
+        <MenuItem value={1}>1</MenuItem>
+        <MenuItem value={2}>2</MenuItem>
+        <MenuItem value={3}>3</MenuItem>
+        <MenuItem value={4}>4</MenuItem>
+        <MenuItem value={5}>5</MenuItem>
       </Select>
     </FormControl>
   );

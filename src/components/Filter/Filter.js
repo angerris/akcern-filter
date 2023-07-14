@@ -26,7 +26,15 @@ export default function Filter() {
       <Rooms />
       {/* Անշարժ գույքի պարամետրեր */}
       <Parameters />
-      <Button variant="outlined">Չեղարկել</Button>
+      <Button
+        variant="outlined"
+        sx={{
+          borderRadius: "28px",
+        }}
+        disabled
+      >
+        Չեղարկել
+      </Button>
     </div>
   );
 }

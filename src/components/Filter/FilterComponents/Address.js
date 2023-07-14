@@ -29,9 +29,8 @@ export default function Address() {
             <MenuItem value="">
               <span className={style.defaultSelect}>Տարածաշրջան</span>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={1}>Երևան</MenuItem>
+            <MenuItem value={2}>Կոտայքի մարզ</MenuItem>
           </Select>
         </FormControl>
       </div>
