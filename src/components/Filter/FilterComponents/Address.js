@@ -1,11 +1,30 @@
-import { FormControl, MenuItem, Select } from "@mui/material";
+import { FormControl } from "@mui/material";
 import { useState } from "react";
 import style from "./../Filter.module.css";
 import logo from "./../../../assets/images/address.svg";
+import YerevanFields from "./AddressComponents/YerevanFields";
+import MainSelectField from "./AddressComponents/MainSelectField";
+import StreetField from "./AddressComponents/StreetField";
 export default function Address() {
   const [value, setValue] = useState("");
+  const [yerevanValue, setYerevanValue] = useState("");
+  const [showYerevanFields, setShowYerevanFields] = useState(false);
+  const [showRegionFields, setShowRegionFields] = useState(false);
+  const [districtValue, setDistrictValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
+    if (e.target.value === "yerevan") {
+      setShowYerevanFields(true);
+    }
+  };
+  const handleYerevanChange = (e) => {
+    setYerevanValue(e.target.value);
+    if (e.target.value !== "") {
+      setShowRegionFields(true);
+    }
+  };
+  const handleDistrictChange = (e) => {
+    setDistrictValue(e.target.value);
   };
   return (
     <>
@@ -14,25 +33,27 @@ export default function Address() {
           <img src={logo} alt="" srcset="" />
           <p>Հասցե</p>
         </div>
-        <FormControl>
-          <Select
-            sx={{
-              height: 40,
-              borderRadius: "12px",
-            }}
-            value={value}
-            onChange={handleChange}
-            displayEmpty
-            className={`${style.field}`}
-            inputProps={{ "aria-label": "Without label" }}
-          >
-            <MenuItem value="">
-              <span className={style.defaultSelect}>Տարածաշրջան</span>
-            </MenuItem>
-            <MenuItem value={1}>Երևան</MenuItem>
-            <MenuItem value={2}>Կոտայքի մարզ</MenuItem>
-          </Select>
-        </FormControl>
+        <div className={style.addressContainer}>
+          <FormControl>
+            <MainSelectField
+              value={value}
+              setShowYerevanFields={setShowYerevanFields}
+              setShowRegionFields={setShowRegionFields}
+              handleChange={handleChange}
+            />
+            {showYerevanFields ? (
+              <YerevanFields
+                handleYerevanChange={handleYerevanChange}
+                yerevanValue={yerevanValue}
+                setShowRegionFields={setShowRegionFields}
+                districtValue={districtValue}
+                setDistrictValue={setDistrictValue}
+                handleDistrictChange={handleDistrictChange}
+              />
+            ) : null}
+            {showRegionFields ? <StreetField /> : null}
+          </FormControl>
+        </div>
       </div>
     </>
   );

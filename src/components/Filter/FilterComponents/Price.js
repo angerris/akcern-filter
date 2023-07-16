@@ -6,8 +6,6 @@ import logo from "./../../../assets/images/price.svg";
 
 export default function Price() {
   const [value, setValue] = useState("");
-
-  //This should execute by default or on Page Load
   const handleChange = (e) => {
     setValue(e.target.value);
   };

@@ -58,7 +58,6 @@ export function SearchForm() {
               className={`${style.field} ${style.searchField}`}
               id="outlined-basic"
               variant="outlined"
-              type="text"
               placeholder="Կոդ"
             />
             <div>
