@@ -1,29 +1,59 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
+import { useState } from "react";
 
-export default function YerevanFields({
-  handleYerevanChange,
-  yerevanValue,
-  setShowStreet,
-  districtValue,
-  handleDistrictChange,
-}) {
+export default function YerevanFields({ setShowStreet }) {
+  //state
+  const [districtName, setDistrictName] = useState([""]);
+  const [areaName, setAreaName] = useState([""]);
+  //event handlers
+  const handleYerevanChange = (e) => {
+    setAreaName(e.target.value);
+    const {
+      target: { value },
+    } = e;
+    const filtered = value.filter((e) => e !== "");
+
+    setAreaName(typeof filtered === "string" ? filtered.split(",") : filtered);
+    if (filtered.length === 0) {
+      setAreaName([""]);
+    }
+    if (e.target.value !== "") {
+      setShowStreet(true);
+    }
+  };
+  const handleDistrictChange = (e) => {
+    setDistrictName(e.target.value);
+    const {
+      target: { value },
+    } = e;
+    const filtered = value.filter((e) => e !== "");
+
+    setDistrictName(
+      typeof filtered === "string" ? filtered.split(",") : filtered
+    );
+    if (filtered.length === 0) {
+      setDistrictName([""]);
+    }
+    if (e.target.value !== "") {
+      setShowStreet(true);
+    }
+  };
   return (
     <>
       <DistrictField
-        districtValue={districtValue}
+        districtName={districtName}
         handleDistrictChange={handleDistrictChange}
-        setShowStreet={setShowStreet}
       />
       <AreaField
-        setShowStreet={setShowStreet}
         handleYerevanChange={handleYerevanChange}
-        yerevanValue={yerevanValue}
+        areaName={areaName}
       />
     </>
   );
 }
-export function DistrictField({ districtValue, handleDistrictChange }) {
+export function DistrictField({ handleDistrictChange, districtName }) {
+  const districtNames = ["Աջափնյակ", "Դավթաշեն", "Նոր Նորք"];
   return (
     <>
       <Select
@@ -32,23 +62,27 @@ export function DistrictField({ districtValue, handleDistrictChange }) {
           borderRadius: "12px",
           marginBottom: "16px",
         }}
-        value={[districtValue]}
+        value={districtName}
         onChange={handleDistrictChange}
         displayEmpty
         className={style.field}
         inputProps={{ "aria-label": "Without label" }}
+        multiple
       >
         <MenuItem value="">
           <span className={style.defaultSelect}>Վարչական շրջան</span>
         </MenuItem>
-        <MenuItem value={"district"}>Աջափնյակ</MenuItem>
-        <MenuItem value={"district2"}>Դավթաշեն</MenuItem>
-        <MenuItem value={"district3"}>Նոր Նորք</MenuItem>
+        {districtNames.map((name) => (
+          <MenuItem key={name} value={name}>
+            {name}
+          </MenuItem>
+        ))}
       </Select>
     </>
   );
 }
-export function AreaField({ yerevanValue, handleYerevanChange }) {
+export function AreaField({ handleYerevanChange, areaName }) {
+  const areaNames = ["գ. Առինջ", "Վահագնի", "Ջրվեժ"];
   return (
     <>
       <Select
@@ -58,17 +92,20 @@ export function AreaField({ yerevanValue, handleYerevanChange }) {
           marginBottom: "16px",
         }}
         onChange={handleYerevanChange}
-        value={yerevanValue}
+        value={areaName}
         displayEmpty
         className={`${style.field}`}
         inputProps={{ "aria-label": "Without label" }}
+        multiple
       >
         <MenuItem value="">
           <span className={style.defaultSelect}>Քաղաք / Գյուղ</span>
         </MenuItem>
-        <MenuItem value={"regionName"}>գ. Առինջ</MenuItem>
-        <MenuItem value={"regionName1"}>Վահագնի</MenuItem>
-        <MenuItem value={"regionName2"}>Ջրվեժ</MenuItem>
+        {areaNames.map((name) => (
+          <MenuItem key={name} value={name}>
+            {name}
+          </MenuItem>
+        ))}
       </Select>
     </>
   );

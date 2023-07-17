@@ -1,6 +1,26 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
-export default function RegionFields({ handleRegionChange, region }) {
+import { useState } from "react";
+export default function RegionFields({ setShowStreet }) {
+  //state
+  const [townName, setTownName] = useState([""]);
+  //event handlers
+  const handleRegionChange = (e) => {
+    setTownName(e.target.value);
+    const {
+      target: { value },
+    } = e;
+    const filtered = value.filter((e) => e !== "");
+
+    setTownName(typeof filtered === "string" ? filtered.split(",") : filtered);
+    if (filtered.length === 0) {
+      setTownName([""]);
+    }
+    if (e.target.value !== "") {
+      setShowStreet(true);
+    }
+  };
+  const townNames = ["Աբովյան", "Ձորաղբյուր", "Արզնի"];
   return (
     <>
       <Select
@@ -10,7 +30,8 @@ export default function RegionFields({ handleRegionChange, region }) {
           marginBottom: "16px",
         }}
         onChange={handleRegionChange}
-        value={region}
+        value={townName}
+        multiple
         displayEmpty
         className={`${style.field}`}
         inputProps={{ "aria-label": "Without label" }}
@@ -18,9 +39,11 @@ export default function RegionFields({ handleRegionChange, region }) {
         <MenuItem value="">
           <span className={style.defaultSelect}>Քաղաք / Գյուղ</span>
         </MenuItem>
-        <MenuItem value={"regionName0"}>Աբովյան</MenuItem>
-        <MenuItem value={"regionName01"}>Ձորաղբյուր</MenuItem>
-        <MenuItem value={"regionName02"}>Արզնի</MenuItem>
+        {townNames.map((name) => (
+          <MenuItem key={name} value={name}>
+            {name}
+          </MenuItem>
+        ))}
       </Select>
     </>
   );
