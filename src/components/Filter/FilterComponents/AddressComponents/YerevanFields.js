@@ -1,12 +1,29 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
+
 export default function YerevanFields({
   handleYerevanChange,
   yerevanValue,
-  setShowRegionFields,
+  setShowStreet,
   districtValue,
   handleDistrictChange,
 }) {
+  return (
+    <>
+      <DistrictField
+        districtValue={districtValue}
+        handleDistrictChange={handleDistrictChange}
+        setShowStreet={setShowStreet}
+      />
+      <AreaField
+        setShowStreet={setShowStreet}
+        handleYerevanChange={handleYerevanChange}
+        yerevanValue={yerevanValue}
+      />
+    </>
+  );
+}
+export function DistrictField({ districtValue, handleDistrictChange }) {
   return (
     <>
       <Select
@@ -15,25 +32,25 @@ export default function YerevanFields({
           borderRadius: "12px",
           marginBottom: "16px",
         }}
-        value={districtValue}
+        value={[districtValue]}
         onChange={handleDistrictChange}
         displayEmpty
         className={style.field}
         inputProps={{ "aria-label": "Without label" }}
       >
-        <MenuItem
-          value=""
-          onClick={() => {
-            setShowRegionFields(false);
-          }}
-        >
+        <MenuItem value="">
           <span className={style.defaultSelect}>Վարչական շրջան</span>
         </MenuItem>
         <MenuItem value={"district"}>Աջափնյակ</MenuItem>
         <MenuItem value={"district2"}>Դավթաշեն</MenuItem>
         <MenuItem value={"district3"}>Նոր Նորք</MenuItem>
       </Select>
-
+    </>
+  );
+}
+export function AreaField({ yerevanValue, handleYerevanChange }) {
+  return (
+    <>
       <Select
         sx={{
           height: 40,
@@ -46,12 +63,7 @@ export default function YerevanFields({
         className={`${style.field}`}
         inputProps={{ "aria-label": "Without label" }}
       >
-        <MenuItem
-          value=""
-          onClick={() => {
-            setShowRegionFields(false);
-          }}
-        >
+        <MenuItem value="">
           <span className={style.defaultSelect}>Քաղաք / Գյուղ</span>
         </MenuItem>
         <MenuItem value={"regionName"}>գ. Առինջ</MenuItem>

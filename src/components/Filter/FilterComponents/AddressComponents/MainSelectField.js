@@ -3,6 +3,7 @@ import style from "./../../Filter.module.css";
 export default function MainSelectField({
   setShowYerevanFields,
   setShowRegionFields,
+  setShowStreet,
   value,
   handleChange,
 }) {
@@ -25,6 +26,7 @@ export default function MainSelectField({
           onClick={() => {
             setShowYerevanFields(false);
             setShowRegionFields(false);
+            setShowStreet(false);
           }}
         >
           <span className={style.defaultSelect}>Տարածաշրջան</span>
