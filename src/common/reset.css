@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Verdana";
+  background: url("./../assets/images/Buy.png") 0 0 / cover no-repeat;
+  background-attachment: fixed;
+}
+ul {
+  list-style: none;
+}

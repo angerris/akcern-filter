@@ -1,0 +1,15 @@
+@import url("./assets/fonts/fonts.css");
+@import url("./common/responsive.css");
+@import url("./common/reset.css");
+.contentWrapper {
+  display: flex;
+  border-radius: 32px;
+  border: 2px solid white;
+  flex-direction: row;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(100px);
+}
+.contentWrapper > * {
+  flex-grow: 1;
+}

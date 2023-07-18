@@ -1,11 +1,14 @@
 .header {
   display: flex;
   height: 64px;
-  flex-direction: row;
+  transition: 0.2s;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 555;
+  color: #fff;
 }
 .headerList {
-  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -21,4 +24,10 @@
 .logo {
   padding: 13px;
   cursor: pointer;
+}
+.innerPadding {
+  padding: 0 84px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
 }
