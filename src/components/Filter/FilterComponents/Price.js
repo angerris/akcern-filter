@@ -56,24 +56,21 @@ export default function Price() {
               />
             </div>
           </FormControl>
-
-          <FormControl>
-            <Select
-              className={`${style.field} ${style.currency}`}
-              sx={{
-                height: 40,
-                borderRadius: "12px",
-              }}
-              value={value}
-              onChange={handleChange}
-              displayEmpty
-              inputProps={{ "aria-label": "Without label" }}
-            >
-              <MenuItem value="">AMD</MenuItem>
-              <MenuItem value="usd">USD</MenuItem>
-              <MenuItem value="eur">EUR</MenuItem>
-            </Select>
-          </FormControl>
+          <Select
+            className={`${style.field} ${style.currency}`}
+            sx={{
+              height: 40,
+              borderRadius: "12px",
+            }}
+            value={value}
+            onChange={handleChange}
+            displayEmpty
+            inputProps={{ "aria-label": "Without label" }}
+          >
+            <MenuItem value="">AMD</MenuItem>
+            <MenuItem value="usd">USD</MenuItem>
+            <MenuItem value="eur">EUR</MenuItem>
+          </Select>
         </div>
       </div>
     </>

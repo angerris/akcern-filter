@@ -7,27 +7,10 @@
   top: 0;
   z-index: 555;
   color: #fff;
+  overflow: hidden;
 }
-.headerList {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  flex-grow: 1;
-}
-.headerList > * {
-  display: flex;
-  flex-direction: row;
-  margin: 0 16px;
-  cursor: pointer;
-}
+
 .logo {
   padding: 13px;
   cursor: pointer;
-}
-.innerPadding {
-  padding: 0 84px;
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
 }

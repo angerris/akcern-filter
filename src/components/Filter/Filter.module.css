@@ -1,13 +1,4 @@
 @import url("./../../common/variables.css");
-.filter {
-  display: flex;
-  background-color: var(--bg-grey);
-  flex-direction: column;
-  row-gap: 16px;
-  width: 35%;
-  border-radius: 32px 0 0 32px;
-  padding: 30px;
-}
 .field {
   background-color: #fff;
   border-radius: 12px;
@@ -49,14 +40,15 @@
 .flexContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 8px;
+  justify-content: space-between;
 }
 .flexContainerInner {
   display: flex;
   flex-direction: row;
   align-items: center;
+
   gap: 6px;
 }
 
@@ -102,10 +94,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-}
-.priceField {
-  flex-shrink: 1;
-  max-width: 120px;
 }
 
 .defaultSelect {

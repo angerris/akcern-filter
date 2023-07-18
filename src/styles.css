@@ -3,13 +3,36 @@
 @import url("./common/reset.css");
 .contentWrapper {
   display: flex;
-  border-radius: 32px;
+
   border: 2px solid white;
-  flex-direction: row;
   justify-content: center;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(100px);
 }
 .contentWrapper > * {
   flex-grow: 1;
+}
+.innerPadding {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.filter {
+  display: flex;
+  background-color: var(--bg-grey);
+  flex-direction: column;
+  row-gap: 16px;
+}
+.headerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+.headerList > * {
+  display: flex;
+  flex-direction: row;
+  margin: 0 16px;
+  cursor: pointer;
 }

@@ -11,7 +11,7 @@ import search from "./../../assets/images/search.svg";
 import { CustomInputStyles } from "./CustomStyles";
 export default function Filter() {
   return (
-    <div className={style.filter}>
+    <div className={"filter"}>
       {/* search  */}
       <SearchForm />
       {/* Անշարժ գույք */}

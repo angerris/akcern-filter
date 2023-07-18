@@ -1,3 +1,128 @@
-.container {
-  padding: 0 84px;
+/* Large devices */
+@media (min-width: 1921px) {
+  .container {
+    padding: 0 200px;
+  }
+  .innerPadding {
+    padding: 0 220px;
+  }
+  .filter {
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .contentWrapper {
+    flex-direction: row;
+    border-radius: 32px;
+  }
+  .cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+  }
+}
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 84px;
+  }
+  .innerPadding {
+    padding: 0 112px;
+  }
+  .filter {
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .contentWrapper {
+    border-radius: 32px;
+  }
+  .cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 44px;
+  }
+  .innerPadding {
+    padding: 0 84px;
+  }
+  .filter {
+    width: 60%;
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .cardWrapper {
+    justify-content: center;
+    padding: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .filter {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 24px;
+  }
+  .innerPadding {
+    padding: 0 24px;
+  }
+  .headerList {
+    opacity: 0;
+  }
+  .cardWrapper {
+    justify-content: center;
+    padding: 16px;
+    width: 90%;
+  }
+  .filter {
+    width: 70%;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 32px 0 0 32px;
+  }
+}
+
+/* Medium devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+    display: flex;
+  }
+  .innerPadding {
+    padding: 0 24px;
+  }
+  .filter {
+    width: 100%;
+    border-radius: 32px 32px 0px 0px;
+  }
+  .contentWrapper {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 32px 32px 0px 0px;
+  }
+  .headerList {
+    opacity: 0;
+  }
+  .cardWrapper {
+    justify-content: center;
+  }
+}
+
+/* Small devices */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 14px;
+  }
+  .innerPadding {
+    padding: 0 14px;
+  }
+  .contentWrapper {
+    overflow: hidden;
+  }
 }

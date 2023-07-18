@@ -42,14 +42,14 @@ export default function Header() {
         boxShadow: headerStyles.shadow,
       }}
     >
-      <div className={style.innerPadding}>
+      <div className={"innerPadding"}>
         {headerStyles.bgColor !== "transparent" ? (
           <img src={darkLogo} alt="" srcset="" className={style.logo} />
         ) : (
           <img src={logo} alt="" srcset="" className={style.logo} />
         )}
 
-        <ul className={style.headerList}>
+        <ul className={"headerList"}>
           <li>
             <p>Անշարժ գույք</p>
             {headerStyles.bgColor !== "transparent" ? (
