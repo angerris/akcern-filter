@@ -1,4 +1,3 @@
-import style from "./Header.module.css";
 import logo from "../../assets/images/logo.svg";
 import darkLogo from "../../assets/images/scrollLogo.svg";
 import globe from "../../assets/images/globe.svg";
@@ -35,7 +34,7 @@ export default function Header() {
 
   return (
     <div
-      className={`${style.header}`}
+      className={`header`}
       style={{
         backgroundColor: headerStyles.bgColor,
         color: headerStyles.color,

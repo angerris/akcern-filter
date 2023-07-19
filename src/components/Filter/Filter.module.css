@@ -7,15 +7,7 @@
   position: relative;
   color: var(--title-black);
 }
-.searchButton {
-  position: absolute;
-  z-index: 111;
-  right: 8px;
-  top: 8%;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
+
 .searchForm {
   display: flex;
   flex-direction: column;
@@ -103,4 +95,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.liked {
+  justify-self: flex-start !important;
+}
+.filterNavItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
 }
