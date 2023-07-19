@@ -4,6 +4,7 @@ import unliked from "./../../assets/images/outlinedHeart.svg";
 import cardImg from "./../../assets/images/cardImg.png";
 import { useState } from "react";
 import style from "./Card.module.css";
+//picture, slider etc
 export default function CardTopContent(props) {
   return (
     <>
@@ -18,6 +19,7 @@ export default function CardTopContent(props) {
   );
 }
 export function CardHeader() {
+  //like / compare
   const [like, setLike] = useState(false);
   return (
     <>

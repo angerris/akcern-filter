@@ -1,10 +1,12 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
 import { useState } from "react";
+/* region choice case */
 export default function RegionFields({ setShowStreet }) {
   //state
   const [townName, setTownName] = useState([""]);
   //event handlers
+  //also describing multiple choice
   const handleRegionChange = (e) => {
     setTownName(e.target.value);
     const {
@@ -21,6 +23,7 @@ export default function RegionFields({ setShowStreet }) {
     }
   };
   const townNames = ["Աբովյան", "Ձորաղբյուր", "Արզնի"];
+  // Քաղաք / Գյուղ
   return (
     <>
       <Select

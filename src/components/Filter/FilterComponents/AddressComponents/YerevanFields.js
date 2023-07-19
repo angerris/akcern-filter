@@ -1,12 +1,13 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
 import { useState } from "react";
-
+/* yerevan choice case */
 export default function YerevanFields({ setShowStreet }) {
   //state
   const [districtName, setDistrictName] = useState([""]);
   const [areaName, setAreaName] = useState([""]);
   //event handlers
+  //also describing multiple choice
   const handleYerevanChange = (e) => {
     setAreaName(e.target.value);
     const {
@@ -41,10 +42,12 @@ export default function YerevanFields({ setShowStreet }) {
   };
   return (
     <>
+      {/* Վարչական շրջան */}
       <DistrictField
         districtName={districtName}
         handleDistrictChange={handleDistrictChange}
       />
+      {/* Քաղաք / Գյուղ */}
       <AreaField
         handleYerevanChange={handleYerevanChange}
         areaName={areaName}

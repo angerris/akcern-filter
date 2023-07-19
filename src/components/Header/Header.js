@@ -7,6 +7,7 @@ import icon from "../../assets/images/icon.svg";
 import darkIcon from "../../assets/images/darkIcon.svg";
 import { useEffect, useState } from "react";
 export default function Header() {
+  //code to change header colors on scroll
   const [headerStyles, setHeaderStyles] = useState({
     bgColor: "transparent",
     color: "white",
@@ -27,7 +28,6 @@ export default function Header() {
       });
     }
   };
-
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => window.removeEventListener("scroll", listenScrollEvent);
@@ -44,9 +44,9 @@ export default function Header() {
     >
       <div className={"innerPadding"}>
         {headerStyles.bgColor !== "transparent" ? (
-          <img src={darkLogo} alt="" srcset="" className={style.logo} />
+          <img src={darkLogo} alt="" srcset="" className={"headerLogo"} />
         ) : (
-          <img src={logo} alt="" srcset="" className={style.logo} />
+          <img src={logo} alt="" srcset="" className={"headerLogo"} />
         )}
 
         <ul className={"headerList"}>

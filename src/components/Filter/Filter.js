@@ -7,8 +7,8 @@ import Area from "./FilterComponents/Area";
 import Rooms from "./FilterComponents/Rooms";
 import Parameters from "./FilterComponents/Parameters";
 import search from "./../../assets/images/search.svg";
-
 import { CustomInputStyles } from "./CustomStyles";
+
 export default function Filter() {
   return (
     <div className={"filter"}>

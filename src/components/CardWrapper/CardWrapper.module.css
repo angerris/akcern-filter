@@ -1,0 +1,15 @@
+.cardFilterItem {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  align-items: center;
+}
+.cardFilterIcon {
+  border: 1px solid var(--dark-blue);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.selected {
+  background-color: var(--dark-blue);
+}

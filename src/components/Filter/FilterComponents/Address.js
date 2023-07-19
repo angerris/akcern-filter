@@ -6,6 +6,7 @@ import YerevanFields from "./AddressComponents/YerevanFields";
 import MainSelectField from "./AddressComponents/MainSelectField";
 import StreetField from "./AddressComponents/StreetField";
 import RegionFields from "./AddressComponents/RegionFields";
+//Հասցե
 export default function Address() {
   // state
   const [value, setValue] = useState("");
@@ -32,6 +33,7 @@ export default function Address() {
         </div>
         <div className={style.addressContainer}>
           <FormControl>
+            {/* Տարածաշրջան */}
             <MainSelectField
               value={value}
               setShowYerevanFields={setShowYerevanFields}
@@ -39,12 +41,15 @@ export default function Address() {
               setShowStreet={setShowStreet}
               handleChange={handleChange}
             />
+            {/* yerevan choice case */}
             {showYerevanFields ? (
               <YerevanFields setShowStreet={setShowStreet} />
             ) : null}
+            {/* region choice case */}
             {showRegionFields ? (
               <RegionFields setShowStreet={setShowStreet} />
             ) : null}
+            {/* street search field */}
             {showStreet ? <StreetField /> : null}
           </FormControl>
         </div>

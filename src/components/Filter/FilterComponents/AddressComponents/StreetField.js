@@ -1,6 +1,7 @@
 import { TextField } from "@mui/material";
 import style from "./../../Filter.module.css";
 import { CustomInputStyles } from "../../CustomStyles";
+/* street search field */
 export default function StreetField() {
   return (
     <>

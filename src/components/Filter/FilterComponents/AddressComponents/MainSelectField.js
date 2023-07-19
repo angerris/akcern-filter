@@ -1,5 +1,6 @@
 import { MenuItem, Select } from "@mui/material";
 import style from "./../../Filter.module.css";
+// Տարածաշրջան
 export default function MainSelectField({
   setShowYerevanFields,
   setShowRegionFields,

@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from "./../Filter.module.css";
 import { Checkbox, FormControl, MenuItem, Select } from "@mui/material";
 import logo from "./../../../assets/images/realty.svg";
-
+//Անշարժ գույք
 export default function RealEstate() {
   return (
     <>
@@ -11,7 +11,9 @@ export default function RealEstate() {
           <img src={logo} alt="" srcset="" />
           <p>Անշարժ գույք</p>
         </div>
+        {/* Գործարք */}
         <Deal />
+        {/* Գույքի տեսակը */}
         <RealtyType />
         <FormControl>
           <label
@@ -27,6 +29,8 @@ export default function RealEstate() {
   );
 }
 export function Deal() {
+  /* Գործարք */
+
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -57,6 +61,7 @@ export function Deal() {
   );
 }
 export function RealtyType() {
+  /* Գույքի տեսակը */
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);

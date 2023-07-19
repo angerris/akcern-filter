@@ -3,18 +3,23 @@ import date from "./../../assets/images/date.svg";
 import floor from "./../../assets/images/floor.svg";
 import rooms from "./../../assets/images/rooms.svg";
 import style from "./Card.module.css";
+//card parameters
 export default function CardBottomContent(props) {
   return (
     <>
       <div className={style.bottomContent}>
+        {/* price, title, etc */}
         <CardMainInfo {...props} />
+        {/* main parameters */}
         <CardParams {...props} />
+        {/* date and button */}
         <CardFooter {...props} />
       </div>
     </>
   );
 }
 export function CardMainInfo(props) {
+  /* price, title, etc */
   return (
     <>
       <div className={style.mainInfo}>
@@ -30,6 +35,7 @@ export function CardMainInfo(props) {
   );
 }
 export function CardParams(props) {
+  /* main parameters */
   return (
     <>
       <div className={style.cardParams}>
@@ -48,6 +54,7 @@ export function CardParams(props) {
   );
 }
 export function CardFooter(props) {
+  /* date and button */
   return (
     <>
       <div className={style.cardFooter}>

@@ -1,7 +1,7 @@
 import style from "./../Filter.module.css";
 import { useState } from "react";
 import logo from "./../../../assets/images/rooms.svg";
-
+// Սենյակներ
 export default function Rooms() {
   return (
     <>
@@ -23,6 +23,7 @@ export default function Rooms() {
 }
 
 export function RoomsNumber(props) {
+  //local state for each selection
   const [selected, setSelected] = useState(false);
   return (
     <>

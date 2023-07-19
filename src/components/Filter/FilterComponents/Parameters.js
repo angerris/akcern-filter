@@ -2,6 +2,7 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 import style from "./../Filter.module.css";
 import logo from "./../../../assets/images/parameters.svg";
+// Անշարժ գույքի պարամետրեր
 export default function Parameters() {
   return (
     <>
@@ -10,14 +11,18 @@ export default function Parameters() {
           <img src={logo} alt="" />
           <p>Անշարժ գույքի պարամետրեր</p>
         </div>
+        {/* Կառույցի տեսակը */}
         <Type />
+        {/* Վերանորոգում */}
         <Restoration />
+        {/* Հարկ */}
         <Floor />
       </div>
     </>
   );
 }
 export function Type() {
+  /* Կառույցի տեսակը */
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -47,6 +52,7 @@ export function Type() {
 }
 
 export function Restoration() {
+  /* Վերանորոգում */
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -75,6 +81,7 @@ export function Restoration() {
   );
 }
 export function Floor() {
+  /* Հարկ */
   const [value, setValue] = useState("");
   const handleChange = (e) => {
     setValue(e.target.value);

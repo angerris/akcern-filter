@@ -3,7 +3,7 @@ import { useState } from "react";
 import style from "./../Filter.module.css";
 import { CustomInputStyles } from "../CustomStyles";
 import logo from "./../../../assets/images/price.svg";
-
+// Գին
 export default function Price() {
   const [value, setValue] = useState("");
   const handleChange = (e) => {
@@ -19,6 +19,7 @@ export default function Price() {
         <div className={style.flexContainer}>
           <FormControl>
             <div className={style.flexContainerInner}>
+              {/* Սկսած */}
               <TextField
                 InputProps={{
                   sx: {
@@ -37,6 +38,7 @@ export default function Price() {
                 className={`${style.field} ${style.priceField}`}
               />
               <div className={style.line}>-</div>
+              {/* Մինչև */}
               <TextField
                 InputProps={{
                   sx: {
@@ -56,6 +58,7 @@ export default function Price() {
               />
             </div>
           </FormControl>
+          {/* currency */}
           <Select
             className={`${style.field} ${style.currency}`}
             sx={{
