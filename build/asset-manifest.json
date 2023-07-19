@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/akcern-filter/static/css/main.1f90c2b1.css",
+    "main.js": "/akcern-filter/static/js/main.1a65725d.js",
+    "static/js/787.9befbdab.chunk.js": "/akcern-filter/static/js/787.9befbdab.chunk.js",
+    "static/media/Buy.png": "/akcern-filter/static/media/Buy.0cac4e30c842a3ba9a7d.png",
+    "static/media/Verdana-BoldItalic.woff": "/akcern-filter/static/media/Verdana-BoldItalic.f79a437c9ae4e554ec97.woff",
+    "static/media/Verdana.woff": "/akcern-filter/static/media/Verdana.a93beb0bfdec1cd97fbb.woff",
+    "static/media/Verdana-Italic.woff": "/akcern-filter/static/media/Verdana-Italic.1840c1e12b85b844042e.woff",
+    "static/media/Verdana-Bold.woff": "/akcern-filter/static/media/Verdana-Bold.ec8590ed736ba359d8fc.woff",
+    "static/media/cardImg.png": "/akcern-filter/static/media/cardImg.674628f07eef5f462684.png",
+    "static/media/Verdana-BoldItalic.woff2": "/akcern-filter/static/media/Verdana-BoldItalic.bdaa35fc253b850dd05c.woff2",
+    "static/media/Verdana.woff2": "/akcern-filter/static/media/Verdana.d3f7f467e65bb20421b1.woff2",
+    "static/media/Verdana-Italic.woff2": "/akcern-filter/static/media/Verdana-Italic.f72e4e7482593f94a47f.woff2",
+    "static/media/Verdana-Bold.woff2": "/akcern-filter/static/media/Verdana-Bold.4f2e58648af5fe67948e.woff2",
+    "static/media/price.svg": "/akcern-filter/static/media/price.2525cc6ba4cc76232d304c8d4f8ba8c7.svg",
+    "static/media/realty.svg": "/akcern-filter/static/media/realty.7760035fcfd4323d9014507b3c1ab61f.svg",
+    "static/media/date.svg": "/akcern-filter/static/media/date.da1fe00497ea4c185cb117d0e67a4647.svg",
+    "static/media/scrollLogo.svg": "/akcern-filter/static/media/scrollLogo.6d022114735baa27933d7afa408fe493.svg",
+    "static/media/logo.svg": "/akcern-filter/static/media/logo.4e59b478eb15eb451e7845baca07752f.svg",
+    "static/media/address.svg": "/akcern-filter/static/media/address.b275458389448dd27304c511ea790866.svg",
+    "static/media/parameters.svg": "/akcern-filter/static/media/parameters.d1002806200729fa3eaf296e99d8c993.svg",
+    "static/media/rooms.svg": "/akcern-filter/static/media/rooms.62dffd44343a490b2836c7600c4c198e.svg",
+    "static/media/floor.svg": "/akcern-filter/static/media/floor.46e64c361ff08533ba3a1f8d8890a086.svg",
+    "static/media/area.svg": "/akcern-filter/static/media/area.e7f30d268acd608a8d842a62cef5035f.svg",
+    "static/media/filledHeart.svg": "/akcern-filter/static/media/filledHeart.d1cea40d66618e3fdfea7214f3d2824e.svg",
+    "static/media/compare.svg": "/akcern-filter/static/media/compare.73ba3269502c0e972d32ab6f1f20e72c.svg",
+    "static/media/darkGlobe.svg": "/akcern-filter/static/media/darkGlobe.ac058a0a392293ed69bb420424decdd6.svg",
+    "static/media/globe.svg": "/akcern-filter/static/media/globe.8ac329c005fbdd11d1d3e64e9d8d683f.svg",
+    "static/media/outlinedHeart.svg": "/akcern-filter/static/media/outlinedHeart.00ecb97887bf35a9468c4385c8985a3b.svg",
+    "static/media/search.svg": "/akcern-filter/static/media/search.efeb11e9b35bb726b249753fd85dbdb5.svg",
+    "index.html": "/akcern-filter/index.html",
+    "static/media/darkIcon.svg": "/akcern-filter/static/media/darkIcon.3b1116f6b81d912aee03bffb673d295a.svg",
+    "static/media/icon.svg": "/akcern-filter/static/media/icon.a87e2e03a1ba29aab27b31abfd042729.svg",
+    "main.1f90c2b1.css.map": "/akcern-filter/static/css/main.1f90c2b1.css.map",
+    "main.1a65725d.js.map": "/akcern-filter/static/js/main.1a65725d.js.map",
+    "787.9befbdab.chunk.js.map": "/akcern-filter/static/js/787.9befbdab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f90c2b1.css",
+    "static/js/main.1a65725d.js"
+  ]
+}
