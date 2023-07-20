@@ -5,6 +5,7 @@ import darkGlobe from "../../assets/images/darkGlobe.svg";
 import icon from "../../assets/images/icon.svg";
 import darkIcon from "../../assets/images/darkIcon.svg";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 export default function Header() {
   //code to change header colors on scroll
   const [headerStyles, setHeaderStyles] = useState({
@@ -43,9 +44,13 @@ export default function Header() {
     >
       <div className={"innerPadding"}>
         {headerStyles.bgColor !== "transparent" ? (
-          <img src={darkLogo} alt="" srcset="" className={"headerLogo"} />
+          <NavLink to={"/"}>
+            <img src={darkLogo} alt="" srcset="" className={"headerLogo"} />
+          </NavLink>
         ) : (
-          <img src={logo} alt="" srcset="" className={"headerLogo"} />
+          <NavLink to={"/"}>
+            <img src={logo} alt="" srcset="" className={"headerLogo"} />
+          </NavLink>
         )}
 
         <ul className={"headerList"}>

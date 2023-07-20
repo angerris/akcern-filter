@@ -1,18 +1,24 @@
 import "./styles.css";
-import CardWrapper from "./components/CardWrapper/CardWrapper";
-import Filter from "./components/Filter/Filter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import store from "./store/store";
+import { Suspense, lazy } from "react";
+import Preloader from "./common/preloader/preloader";
+const HomePage = lazy(() => import("./components/HomePage/Homepage"));
+const Catalog = lazy(() => import("./components/Catalog/Catalog"));
 function App() {
   return (
     <>
-      <Header />
-      <div className="container">
-        <div className="contentWrapper">
-          <Filter />
-          <CardWrapper state={store.getState().cards} />
+      <BrowserRouter>
+        <Header />
+        <div className="container">
+          <Suspense fallback={<Preloader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/catalog" element={<Catalog />} />
+            </Routes>
+          </Suspense>
         </div>
-      </div>
+      </BrowserRouter>
     </>
   );
 }

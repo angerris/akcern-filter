@@ -121,7 +121,6 @@
     border-radius: 0px;
     display: none !important;
   }
-
   .cardFilter {
     display: none !important;
   }
@@ -132,6 +131,7 @@
     align-items: center;
     border-radius: 0px;
     border: none !important;
+    background: transparent !important;
   }
   .mobileSearch {
     margin-top: 16px;
@@ -144,16 +144,7 @@
   .defaultSearch {
     display: none !important;
   }
-  .header {
-    background: url("./../assets/images/scrollLogo.svg") 16px 16px/200px
-      no-repeat;
-    background-color: rgba(250, 250, 250, 1) !important;
-    color: #000;
-    transition: 0s;
-  }
-  .headerLogo {
-    display: none !important;
-  }
+
   .cardWrapper {
     padding: 32px 0px !important;
     justify-content: center;

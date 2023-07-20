@@ -8,19 +8,11 @@ import Rooms from "./FilterComponents/Rooms";
 import Parameters from "./FilterComponents/Parameters";
 import search from "./../../assets/images/search.svg";
 import darkIcon from "./../../assets/images/darkIcon.svg";
-
 import { CustomInputStyles } from "./CustomStyles";
 
 export default function Filter() {
   return (
     <>
-      {/* mobile  */}
-      <SearchForm stylesForSearch={"mobileSearch"} />
-      <div className="filterNavContainer">
-        <FilterMobileButton />
-        <CardFilterMobile />
-      </div>
-
       {/* desktop */}
       <div className={"filter"}>
         {/* search  */}
@@ -97,16 +89,8 @@ export function Liked() {
 }
 export function CardFilterMobile() {
   return (
-    <div className={style.filterNavItem}>
+    <div className={`${style.filterNavItem} `}>
       <p>Դասավորել ըստ</p>
-      <img src={darkIcon} alt="" />
-    </div>
-  );
-}
-export function FilterMobileButton() {
-  return (
-    <div className={style.filterNavItem}>
-      <p>Ֆիլտր</p>
       <img src={darkIcon} alt="" />
     </div>
   );
