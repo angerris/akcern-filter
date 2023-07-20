@@ -24,6 +24,9 @@
   flex-direction: column;
   row-gap: 16px;
 }
+.mobileFilter {
+  padding: 0 24px;
+}
 .headerList {
   display: flex;
   flex-direction: row;
@@ -55,12 +58,6 @@
   padding: 13px;
   cursor: pointer;
 }
-.filterNavContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  font-size: 16px;
-}
 
 .header {
   display: flex;
@@ -73,15 +70,7 @@
   color: #fff;
   overflow: hidden;
 }
-.searchButton {
-  position: absolute;
-  z-index: 111;
-  right: 8px;
-  top: 8px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
+
 .preloader {
   display: flex;
   flex-direction: column;

@@ -16,7 +16,7 @@ export default function Filter() {
       {/* desktop */}
       <div className={"filter"}>
         {/* search  */}
-        <SearchForm liked={<Liked />} stylesForSearch={"defaultSearch"} />
+        <SearchForm liked={<Liked />} />
         {/* Անշարժ գույք */}
         <RealEstate />
         {/* Հասցե */}
@@ -47,7 +47,7 @@ export function SearchForm(props) {
     <>
       <div className={`${style.searchFormContainer} ${style.componentSpacing}`}>
         <FormControl>
-          <div className={`${style.searchForm} ${props.stylesForSearch} `}>
+          <div className={`${"searchForm"} `}>
             <TextField
               InputProps={{
                 sx: {
@@ -65,7 +65,7 @@ export function SearchForm(props) {
               placeholder="Կոդ"
             />
             <div>
-              <button className={"searchButton"}>
+              <button className={`${style.searchButton}`}>
                 <img src={search} alt="" srcset="" />
               </button>
               {props.liked}

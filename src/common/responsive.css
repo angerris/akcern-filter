@@ -28,6 +28,16 @@
   .filterNavContainer {
     display: none !important;
   }
+  .mobileFilter {
+    width: 100%;
+    border-radius: 0px;
+    display: none !important;
+  }
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
 }
 @media (max-width: 1920px) {
   .container {
@@ -54,6 +64,16 @@
   }
   .filterNavContainer {
     display: none !important;
+  }
+  .mobileFilter {
+    width: 100%;
+    border-radius: 0px;
+    display: none !important;
+  }
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
   }
 }
 
@@ -121,6 +141,11 @@
     border-radius: 0px;
     display: none !important;
   }
+  .mobileFilter {
+    width: 100%;
+    border-radius: 0px;
+    display: block !important;
+  }
   .cardFilter {
     display: none !important;
   }
@@ -151,6 +176,11 @@
   }
   .filterNavContainer {
     display: flex !important;
+  }
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
   }
 }
 

@@ -6,13 +6,13 @@
 .searchField {
   position: relative;
   color: var(--title-black);
+  margin-top: 80px;
   width: 100%;
 }
 
 .searchForm {
   display: flex;
   flex-direction: column;
-  row-gap: 32px;
 }
 .searchButton {
   position: absolute;
@@ -36,9 +36,7 @@
   max-height: 40px;
   cursor: pointer;
 }
-.labeledCheckbox:hover {
-  border: 1px solid var(--primary-black);
-}
+
 .flexContainer {
   display: flex;
   flex-direction: row;
@@ -114,4 +112,11 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  padding: 0 8px;
+}
+.filterNavContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
 }
