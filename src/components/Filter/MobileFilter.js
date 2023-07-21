@@ -11,7 +11,7 @@ import { useState } from "react";
 import { SearchForm } from "./Filter";
 
 export default function MobileFilter() {
-  const [showFilter, setShowFilter] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
   const handleClick = () => {
     setShowFilter(!showFilter);
   };
@@ -49,11 +49,11 @@ export function MobileFilterNav({ handleClick }) {
     <>
       <div className={style.filterNavContainer}>
         <div className={`${style.filterNavItem}`} onClick={handleClick}>
-          <p>filter</p>
+          <p>Ֆիլտր</p>
           <img src={darkIcon} alt="" srcset="" />
         </div>
         <div className={style.filterNavItem}>
-          <p>dasavorel yst</p>
+          <p>Դասավորել ըստ</p>
           <img src={darkIcon} alt="" srcset="" />
         </div>
       </div>

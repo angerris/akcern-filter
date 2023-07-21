@@ -8,7 +8,7 @@ const Catalog = lazy(() => import("./components/Catalog/Catalog"));
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header />
         <div className="container">
           <Suspense fallback={<Preloader />}>

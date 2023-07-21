@@ -64,11 +64,12 @@
   height: 64px;
   transition: 0.2s;
   width: 100%;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 555;
   color: #fff;
   overflow: hidden;
+  position: relative;
 }
 
 .preloader {
@@ -77,4 +78,63 @@
   justify-content: center;
   align-items: center;
   margin-top: 20%;
+}
+.card {
+  border: 1px solid #fff;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  width: 100%;
+  padding: 24px;
+  height: auto;
+  background: rgba(211, 211, 211, 0.2);
+  backdrop-filter: blur(100px);
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.card:hover {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.cardImg {
+  padding: 10%;
+}
+.cardBtn {
+  background-color: transparent;
+  border-radius: 42px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px 24px;
+  width: 100%;
+  bottom: 0;
+  transition: 0.2s;
+  font-weight: bold;
+}
+.cardBtn:hover {
+  background-color: #fff;
+  color: var(--orange);
+  transition: 0.2s;
+  box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.3);
+}
+.cardBtn:active {
+  box-shadow: none;
+}
+.homeTextWrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 20%;
+  margin-top: 70px;
+  margin-bottom: 60px;
 }

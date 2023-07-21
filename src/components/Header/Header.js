@@ -4,6 +4,9 @@ import globe from "../../assets/images/globe.svg";
 import darkGlobe from "../../assets/images/darkGlobe.svg";
 import icon from "../../assets/images/icon.svg";
 import darkIcon from "../../assets/images/darkIcon.svg";
+import menu from "../../assets/images/menu.svg";
+import lightMenu from "../../assets/images/lightMenu.svg";
+
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 export default function Header() {
@@ -51,6 +54,15 @@ export default function Header() {
           <NavLink to={"/"}>
             <img src={logo} alt="" srcset="" className={"headerLogo"} />
           </NavLink>
+        )}
+        {headerStyles.bgColor !== "transparent" ? (
+          <div className="burger">
+            <img src={menu} alt="" />
+          </div>
+        ) : (
+          <div className="burger">
+            <img src={lightMenu} alt="" />
+          </div>
         )}
 
         <ul className={"headerList"}>
