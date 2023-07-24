@@ -1,4 +1,4 @@
-import style from "./MobileFilter.module.css";
+import style from "./Filter.module.css";
 import { Button } from "@mui/material";
 import RealEstate from "./FilterComponents/RealEstate";
 import Address from "./FilterComponents/Address";

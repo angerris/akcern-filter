@@ -8,7 +8,6 @@
   color: var(--title-black);
   width: 100%;
 }
-
 .searchForm {
   display: flex;
   flex-direction: column;
@@ -114,4 +113,10 @@
   align-items: center;
   gap: 8px;
   font-size: 14px;
+}
+.filterNavContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
 }

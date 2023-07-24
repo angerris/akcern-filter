@@ -9,7 +9,6 @@ import Parameters from "./FilterComponents/Parameters";
 import search from "./../../assets/images/search.svg";
 import darkIcon from "./../../assets/images/darkIcon.svg";
 import { CustomInputStyles } from "./CustomStyles";
-
 export default function Filter() {
   return (
     <>

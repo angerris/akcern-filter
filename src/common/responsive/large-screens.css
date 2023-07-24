@@ -1,0 +1,134 @@
+/* Large devices */
+@media (min-width: 1920px) {
+  .container {
+    padding: 0 200px;
+  }
+  .innerPadding {
+    padding: 0 220px;
+  }
+  .filter {
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .contentWrapper {
+    flex-direction: row;
+    border-radius: 32px;
+  }
+  .cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+  }
+  .mobileSearch {
+    display: none !important;
+  }
+  .filterNavContainer {
+    display: none !important;
+  }
+  .mobileFilter {
+    width: 100%;
+    border-radius: 0px;
+    display: none !important;
+  }
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .homeCardWrapper {
+    display: flex;
+    gap: 80px;
+    flex-direction: row !important;
+    margin-bottom: 80px;
+  }
+  .burger {
+    display: none;
+  }
+  .homeTitle {
+    font-size: 80px;
+  }
+  .cardTitle {
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 84px;
+  }
+  .innerPadding {
+    padding: 0 112px;
+  }
+  .filter {
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .contentWrapper {
+    border-radius: 32px;
+  }
+  .cardWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 150%;
+  }
+  .mobileSearch {
+    display: none !important;
+  }
+  .filterNavContainer {
+    display: none !important;
+  }
+  .mobileFilter {
+    width: 100%;
+    border-radius: 0px;
+    display: none !important;
+  }
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+  .homeCardWrapper {
+    display: flex;
+    gap: 80px;
+    flex-direction: row !important;
+    margin-bottom: 80px;
+  }
+  .burger {
+    display: none;
+  }
+  .homeTitle {
+    font-size: 80px;
+  }
+  .cardTitle {
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 44px;
+  }
+  .innerPadding {
+    padding: 0 84px;
+  }
+  .filter {
+    width: 60%;
+    padding: 32px;
+    border-radius: 32px 0 0 32px;
+  }
+  .cardWrapper {
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .headerList {
+    display: none !important;
+  }
+  .burger {
+    display: block;
+    right: 32px;
+    top: 24px;
+    position: absolute;
+  }
+}

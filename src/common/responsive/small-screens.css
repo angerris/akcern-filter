@@ -1,0 +1,15 @@
+/* Small devices */
+@media (max-width: 375px) {
+  .container {
+    padding: 0 14px;
+  }
+  .innerPadding {
+    padding: 0 14px;
+  }
+  .contentWrapper {
+    overflow: hidden;
+  }
+  .headerLogo {
+    width: 240px;
+  }
+}
